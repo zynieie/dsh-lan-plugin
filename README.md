@@ -19,7 +19,7 @@ This monorepo ships dsh plugins that follow the official `dsh-plugin` distributi
 
 *实拍：手机连同一个 WiFi，打开 `http://<lan-ip>:3080/`，session 列表 / 聊天记录 / 工具栏跟电脑 `http://127.0.0.1:3080/` 上看到的一模一样，不用装任何 app。*
 
-## Why this repo exists | 为什么有这个仓库
+## Why this repo exists
 
 `deepseek-ai/deepseek-harness` is in pre-release. From their `CONTRIBUTING.md`:
 
@@ -37,13 +37,13 @@ Each plugin here changes very little (often one method, a line or two of fallbac
 
 每个 plugin 实际改的就那么点东西（常常是一个方法、一两行 fallback），上游哪天开门直接就是 compatible 的 diff。这边 monkey-patch 的函数体，留着当未来 upstream PR 的草稿也合适。
 
-## Plugins | 插件列表
+## Plugins
 
 | Package / 包名 | What it fixes / 修什么 |
 |---|---|
 | [`@zynieie/dsh-lan-fix`](packages/dsh-lan-fix/) | Lets `dsh web` load on `http://<lan-ip>:3080/` (insecure context) without the WebSocket abort storm. Patches `AbstractApiClient.mintRpcId` to fall back to `crypto.getRandomValues` when `crypto.randomUUID` is unavailable.<br><br>让 `dsh web` 在 `http://<lan-ip>:3080/`（insecure context）下能加载，不再卡空白。monkey-patch `AbstractApiClient.mintRpcId`，没有 `crypto.randomUUID` 时回落到 `crypto.getRandomValues`。 |
 
-## Repo layout | 仓库结构
+## Repo layout
 
 ```
 .
@@ -67,7 +67,7 @@ Each plugin here changes very little (often one method, a line or two of fallbac
 └── .gitignore
 ```
 
-## Install any plugin | 安装任意 plugin
+## Install any plugin
 
 Each plugin ships as an npm package; install it into the `node_modules/` of your dsh profile checkout (or symlink the workspace package in):
 
@@ -87,13 +87,13 @@ The dsh bundle-loader walks patch layers in dependency order. Each plugin's `app
 
 dsh bundle-loader 按依赖顺序走 patch 层。每个 plugin 的 `apply()` 在 web-app 任何构造 `AbstractApiClient` 的 row 之前执行，所以所有子类通过原型链都拿到补丁。
 
-## Contributing | 贡献
+## Contributing
 
 Open an issue, send a PR to this repo, or open a discussion. The plugins here follow the same shape as upstream's `packages/bundle/*` — small, focused, single-responsibility — so contributions are usually one-method edits in `src/index.ts`.
 
 提 issue、发 PR、开 discussion 都行。这里的 plugin 沿用上游 `packages/bundle/*` 的形态——小、专注、单职责——所以贡献通常就是 `src/index.ts` 里一个方法的小改。
 
-## License | 许可证
+## License
 
 MIT per package — see [`packages/dsh-lan-fix/LICENSE`](packages/dsh-lan-fix/LICENSE).
 
