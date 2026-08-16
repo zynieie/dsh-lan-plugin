@@ -1,6 +1,6 @@
 # dsh-lan-plugin
 
-> 我给 [dsh](https://github.com/deepseek-ai/deepseek-harness) 做的一个插件，修局域网访问。挂了 `dsh-plugin` topic（上游明文鼓励的贡献方式）。
+> A dsh plugin I built — fixes LAN access. Tagged `dsh-plugin` per upstream's stated contribution convention.
 >
 > 中文说明：[README.zh.md](README.zh.md)
 
