@@ -1,0 +1,11 @@
+# `@zynieie/dsh-lan-fix` Cordis patch.
+#
+# This patch is intentionally empty: the LAN fix is a runtime
+# monkey-patch of AbstractApiClient.prototype.mintRpcId, applied in
+# `src/index.ts` during plugin `apply`. Cordis rows are configuration
+# overlays, not SDK method-body edits, so this layer only declares the
+# plugin module to keep it on the loader's startup pass.
+#
+# Listed first so the patch runs before any web-app rows that build an
+# AbstractApiClient instance (WebApiClient, FixtureApiClient, etc).
+- name: '@zynieie/dsh-lan-fix'

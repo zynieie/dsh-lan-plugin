@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build artefacts
+packages/*/lib/
+packages/*/*.tsbuildinfo
+packages/*/.tsbuildinfo*
+
+# Logs
+*.err.log
+*.out.log
+_run_logs/
+备份/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local Claude / agent state
+.claude/
