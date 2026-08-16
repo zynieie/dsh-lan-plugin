@@ -7,6 +7,10 @@
 
 This monorepo ships dsh plugins that follow the official `dsh-plugin` distribution conventions (npm package + `cordis.patch.yml` + profile-node_modules symlink). No `dsh` source is modified.
 
+![Phone accessing dsh web on the LAN — full session list, chat history, and tool palette, no app install](docs/images/lan-phone-screenshot.jpg)
+
+*Real capture: a phone on the same WiFi opening `http://<lan-ip>:3080/` after the LAN fix is installed — same `dsh web` session as the PC's `http://127.0.0.1:3080/`.*
+
 ## Why this repo exists
 
 `deepseek-ai/deepseek-harness` is in pre-release and their `CONTRIBUTING.md` is explicit:
