@@ -1,6 +1,6 @@
 # dsh-lan-plugin（中文版）
 
-> 为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）写的独立插件仓库，专门收录"上游暂时不接 PR"但社区又能用得上的小修补。
+> 我给 [dsh](https://github.com/deepseek-ai/deepseek-harness) 写的一个插件——修局域网访问。挂了 `dsh-plugin` topic（上游明文鼓励的贡献方式）。
 >
 > English README: [README.md](README.md)
 
@@ -17,13 +17,13 @@
 
 ## 为什么有这个仓库
 
-`deepseek-ai/deepseek-harness` 还在 pre-release，他们的 `CONTRIBUTING.md` 明文写了：
+`deepseek-ai/deepseek-harness` 还在 pre-release，他们的 `CONTRIBUTING.md` 写得直白：
 
 > "We are sorry that we cannot accept external pull requests at the moment."
 
-仓库层面也设了 `has_pull_requests: false`，连 PR 都提不上去。他们推荐的贡献方式就是发带 `dsh-plugin` topic 的独立插件——这个仓库就是那条路。
+仓库层面也设了 `has_pull_requests: false`，外部 PR 暂时走不通。他们明文推荐的贡献方式就是发带 `dsh-plugin` topic 的独立插件——这条仓库就专门走那条路。
 
-等以后上游开了 PR 接口，每个插件实际改的东西都很小（常常就是一个方法、一行 fallback），**直接 drop-in 兼容**。这个 monorepo 里每个 plugin 的 monkey-patch 函数体，正好就是以后合到上游时的 diff。
+每个 plugin 实际改的就那么点东西（常常是一个方法、一两行 fallback），上游哪天开门直接就是 compatible 的 diff。这边 monkey-patch 的函数体，留着当未来 upstream PR 的草稿也合适。
 
 ---
 

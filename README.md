@@ -1,6 +1,6 @@
 # dsh-lan-plugin
 
-> 为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）写的独立插件仓库——收录"上游暂时不接 PR"但社区又能用得上的小修补。
+> 我给 [dsh](https://github.com/deepseek-ai/deepseek-harness) 做的一个插件，修局域网访问。挂了 `dsh-plugin` topic（上游明文鼓励的贡献方式）。
 >
 > 中文说明：[README.zh.md](README.zh.md)
 
@@ -15,13 +15,13 @@ This monorepo ships dsh plugins that follow the official `dsh-plugin` distributi
 
 ## Why this repo exists
 
-`deepseek-ai/deepseek-harness` is in pre-release and their `CONTRIBUTING.md` is explicit:
+`deepseek-ai/deepseek-harness` is in pre-release. From their `CONTRIBUTING.md`:
 
 > "We are sorry that we cannot accept external pull requests at the moment."
 
-The repo also has `has_pull_requests: false` at the repo level, so even preparing a PR is server-blocked. The recommended contribution path is publishing plugins with the `dsh-plugin` topic — that's what this repo does.
+The repo also has `has_pull_requests: false` at the repo level, so external PRs are server-blocked for now. They explicitly recommend the contribution path: publish plugins with the `dsh-plugin` topic — this repo follows that path.
 
-When upstream opens external PRs, each plugin's effective change will be small (often one method, one line of fallback) and trivially drop-in compatible. The body of every plugin's monkey-patch here matches the eventual upstream diff.
+Each plugin here changes very little (often one method, a line or two of fallback), so it slots in cleanly when upstream opens up. The body of every monkey-patch doubles as a draft of the eventual upstream diff.
 
 ## Plugins
 
