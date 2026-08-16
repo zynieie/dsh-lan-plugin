@@ -1,6 +1,8 @@
 # dsh-lan-plugin
 
-> Independent [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) plugins for the things upstream can't (yet) accept as PRs.
+> 为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）写的独立插件仓库——收录"上游暂时不接 PR"但社区又能用得上的小修补。
+>
+> 中文说明：[README.zh.md](README.zh.md)
 
 [![dsh-plugin](https://img.shields.io/badge/dsh--plugin-4D6BFE?style=flat-square)](https://github.com/topics/dsh-plugin)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](packages/dsh-lan-fix/LICENSE)
